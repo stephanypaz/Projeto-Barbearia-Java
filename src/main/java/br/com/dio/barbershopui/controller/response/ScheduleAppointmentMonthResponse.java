@@ -1,9 +1,13 @@
 package br.com.dio.barbershopui.controller.response;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.List;
 
 public record ScheduleAppointmentMonthResponse(
-    int year,
-    int month,
+        @JsonProperty("year")
+        int year,
+        @JsonProperty("month")
+        int month,
     List<ClientScheduleAppointmentResponse> scheduledAppointments
 ) {}
